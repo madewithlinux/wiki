@@ -4,6 +4,43 @@ layout: default
 
 {{ content }}
 
+{% if page.generate_backlinks != false %}
+
+{% capture backlinks_md -%}
+# backlinks
+pages that link to this page:
+
+{% assign page_path_stub_len = page.path.size |plus: -3 -%}
+{% assign page_path_stub = page.path |slice: 0, page_path_stub_len -%}
+
+{% capture page_wikilink -%}
+[<a href="{{ page_path_stub }}" title="{{ page.title }}">{{ page_path_stub }}</a>]
+{%- endcapture %}
+{% capture page_md_wikilink -%}
+[[{{ page_path_stub }}]]
+{%- endcapture %}
+
+
+{% assign pages_with_backlinks = site.pages |where_exp: "taget_page", "taget_page.content contains page_wikilink" -%}
+{%- for page in site.pages %}
+{%- unless page.content contains page_wikilink -%}
+  {%- unless page.content contains page_md_wikilink -%}
+    {%- continue -%}
+  {%- endunless -%}
+{%- endunless -%}
+{%- if page.published != false and page.title != nil and page.exclude_from_backlinks != true %}
+* [[{{ page.title }}]({{ page.url | relative_url }})]
+{%- endif -%}
+{% endfor %}
+
+{%- endcapture %}
+
+{% if backlinks_md contains '* ' %}
+{{ backlinks_md | markdownify }}
+{% endif %}
+
+{% endif %}
+
 <script type="text/javascript">
   // Hack: Replace page-link with "Page Title"
   document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
