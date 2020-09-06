@@ -1,5 +1,14 @@
 # jekyll static wiki on github pages
 tags: [[webdev]]
+- [jekyll static wiki on github pages](#jekyll-static-wiki-on-github-pages)
+- [TODO features](#todo-features)
+- [features that I have added or implemented](#features-that-i-have-added-or-implemented)
+  - [backlinks (WIP)](#backlinks-wip)
+  - [list of all pages](#list-of-all-pages)
+  - [turn raw urls into links automatically](#turn-raw-urls-into-links-automatically)
+  - [generate and serve the site locally](#generate-and-serve-the-site-locally)
+- [reference links](#reference-links)
+
 
 # TODO features
 * tags
