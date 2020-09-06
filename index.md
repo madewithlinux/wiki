@@ -1,5 +1,4 @@
 # index
-site last updated: {{ site.github.owner.updated_at }}
 
 This is where I brain-dump stuff that I learn, and put links to cool things that I find on the internet, along with my thoughts about them.
 It is intended for future-me to refer back to, but if you find the information here helpful, that's cool too.
