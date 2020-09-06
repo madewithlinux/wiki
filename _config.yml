@@ -1,2 +1,5 @@
 theme: jekyll-theme-primer
 title: jorsh.xyz wiki
+url: "https://jorsh.xyz/wiki/"
+plugins:
+  - jekyll-sitemap
