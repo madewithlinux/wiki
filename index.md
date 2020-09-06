@@ -17,7 +17,7 @@ This provides various useful features like backlinks tracking, search, and also 
 # all pages
 {% for page in site.pages %}
 {%- if page.published != false and page.title != nil -%}
-* [[{{ page.title }}]({{ page.url }})]
+* [[{{ page.title }}]({{ page.url | relative_url }})]
 {% endif -%}
 {% endfor %}
 
