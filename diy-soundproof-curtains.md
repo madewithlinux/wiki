@@ -39,12 +39,20 @@ harbor freight option is way cheaper than alternatives
 
 potential curtain options:
 * Ikea VIDGA https://www.ikea.com/us/en/cat/track-systems-18893/
+  * buying guide https://www.ikea.com/gb/en/files/pdf/26/9c/269c8bc8/ikea-vidga.pdf
   * multiple sections can be joined together for longer lengths
   * wall clamps can (must) be added in the middle,not just at the ends of the track
     * there's ceiling clamps available too https://www.ikea.com/us/en/p/vidga-ceiling-bracket-white-90299091/
   * there's a corner piece available: https://www.ikea.com/us/en/p/vidga-single-track-with-corner-connector-white-s79166403/
+  * pretty cheap: $18/6ft
   * con: it doesn't look like it can support a whole lot of weight
-    * could maybe solve this by using more roller hooks than it recommends?
+    * could maybe solve this by using more roller hooks than it recommends? probably not, it looks like it's by default a whole lot of rollers
+    * [this amazon listing](https://www.amazon.com/IKEA-Vidga-Single-Track-702-991-53/dp/B07D1D2TH5) says it can do 11lb (5kg).
+      [ikea.co.id](https://www.ikea.co.id/en/products/curtains-and-blinds/curtain-rods-and-systems/vidga-art-50299154) backs this up. (not sure why this spec isn't listed on ikea.com)
+    * so I should be able to just barely do 2 harbor freight moving blankets. But probably less, because the moving blanket is smaller than a curtain
+* other curtain tracks, such as variants of [this one](https://www.amazon.com/Curtain-3ft-9-8ft-Curtains-Divider-Ceiling-Shower-Ceiling/dp/B07ZS6RPJQ)
+  * much more expensive than the ikea one (example is $60/6ft)
+  * higher load-bearing capacity (that one claims 25kg per track)
 
 
 
