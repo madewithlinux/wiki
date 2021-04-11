@@ -20,7 +20,7 @@ tags: [[webdev]]
 # features that I have added or implemented
 
 ## backlinks (WIP)
-a kind-of implementation of backlinks is in [`_layout/page.html`](https://github.com/Joshua-Wright/wiki/blob/master/_layouts/page.html). It looks for wikilinks (links like `[[this]]`) in markdown or html.
+a kind-of implementation of backlinks is in [`_layout/page.html`](https://github.com/madewithlinux/wiki/blob/master/_layouts/page.html). It looks for wikilinks (links like `[[this]]`) in markdown or html.
 
 This implementation is very hacky. I don't think there's a good way of actually doing this with the standard github-pages jekyll config, I think it's worth setting up a CI-server and using a plugin or something to make backlinks automatically (such as maybe this one: https://github.com/raghuveerdotnet/simply-jekyll )
 

@@ -10,7 +10,7 @@ It is intended for future-me to refer back to, but if you find the information h
 
 
 this wiki is generated using [foam](https://github.com/foambubble/foam).
-This is how I interact with it, and if you're looking for some particular information, you're probably best off cloning [the github repo for this site](https://github.com/joshua-wright/wiki) and interacting with it that way.
+This is how I interact with it, and if you're looking for some particular information, you're probably best off cloning [the github repo for this site](https://github.com/madewithlinux/wiki) and interacting with it that way.
 This provides various useful features like backlinks tracking, search, and also just having a better list of all the files.
 
 
