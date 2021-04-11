@@ -36,7 +36,7 @@ This page is class notes for teaching a class on how to use OnShape CAD to make 
 (if you cannot do the setup, you'll just have to watch)
 * OnShape account (see [helpful links](#helpful-links) section)
   * please have this account ready before class
-* a personal device that can use the onshape account
+* a personal device that can use the OnShape account
   * a recent version of firefox or chrome (on any OS) is probably all you need
   * a real mouse (not a laptop touchpad) is a huge plus, in terms of user-experience
 * phone (or similarly-sized object to put in the stand)
@@ -51,7 +51,7 @@ This page is class notes for teaching a class on how to use OnShape CAD to make 
 
 # helpful links
 *  get a free OnShape account
-  * onshape free account for hobbyists (non-commercial): https://www.onshape.com/en/products/free
+  * OnShape free account for hobbyists (non-commercial): https://www.onshape.com/en/products/free
   * (you might need to turn off adblock for that link to work, for some reason)
   * NOTE: a free account cannot make private designs, only public ones. (just like github used to be)
 * [Isaac Good](https://isaacgood.com/hackerlab/)'s [**discord instructions**](https://docs.google.com/document/d/e/2PACX-1vTruRIsJ4FDq1X8GJILeOs0qOJIedwmP119POkkqrCD8JVHfvzLJHyY8tWPqmtgUHmiYPLK63hbUHSI/pub)
