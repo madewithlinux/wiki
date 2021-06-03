@@ -1,5 +1,6 @@
 # WinXP-style Alt-Tab
 
+
 # problem
 
 Windows 7 and above ship an alt-tab menu that shows thumbnails of open applications.
@@ -10,6 +11,26 @@ The problem with this is
   * (in contrast to most linux environments, where the UI waits a second to render. This allows it to not render at all, and instead switch windows immediately, if the `alt` is released inside the timeout.)
 
 Thus, when switching between applications frequently (e.g. with two windows tiled side-by-side), the alt-tab UI menu is constantly flickering in and out of existence. This causes headaches for some people (myself included)
+
+
+## side note: yes, this is a real intentional feature that gnome 3 has and windows 10 does not have
+Here's the relavent snippet of code 
+```javascript
+// We delay showing the popup so that fast Alt+Tab users aren't
+// disturbed by the popup briefly flashing.
+this._initialDelayTimeoutId = GLib.timeout_add(
+    GLib.PRIORITY_DEFAULT,
+    POPUP_DELAY_TIMEOUT,
+    () => {
+        this._showImmediately();
+        return GLib.SOURCE_REMOVE;
+    });
+GLib.Source.set_name_by_id(this._initialDelayTimeoutId, '[gnome-shell] Main.osdWindow.cancel');
+```
+this excerpt is from `gnome-shell` source file `js/ui/switcherPopup.js`, 
+[gitlab source permalink here](https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/a21058e6c9008bb6145e6c8e48e3c2f5452e68e8/js/ui/switcherPopup.js#L139)
+
+
 
 # potential solution: WinXP-style Alt-Tab
 
