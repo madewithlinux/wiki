@@ -1,5 +1,14 @@
 # WinXP-style Alt-Tab
 
+- [WinXP-style Alt-Tab](#winxp-style-alt-tab)
+- [problem](#problem)
+  - [side note: yes, this is a real intentional feature that gnome 3 has and windows 10 does not have](#side-note-yes-this-is-a-real-intentional-feature-that-gnome-3-has-and-windows-10-does-not-have)
+- [potential solution: WinXP-style Alt-Tab](#potential-solution-winxp-style-alt-tab)
+  - [problem: too hard to type](#problem-too-hard-to-type)
+  - [another problem: the switched-away-from app receives an alt tap](#another-problem-the-switched-away-from-app-receives-an-alt-tap)
+- [alternative solution: regedit](#alternative-solution-regedit)
+- [better solution: delay alt-tab](#better-solution-delay-alt-tab)
+
 
 # problem
 
@@ -74,7 +83,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // and then replace KC_TAB with TABALT in layout definition
 ```
 
-See [my full keyboard layout file](https://github.com/madewithlinux/qmk_firmware/blob/master/keyboards/kbdfans/kbd75/keymaps/madewithlinux/keymap.c) for full implementation, including a function key to toggle it on and off, and using part of my keyboard's RGB underglow as an indicator.
+See [my full keyboard layout file](https://github.com/madewithlinux/qmk_firmware/blob/0138aa9da881dc3b4ee76a510b8fe2727a865292/keyboards/kbdfans/kbd75/keymaps/madewithlinux/keymap.c) for full implementation, including a function key to toggle it on and off, and using part of my keyboard's RGB underglow as an indicator.
 
 
 ## another problem: the switched-away-from app receives an alt tap
@@ -97,5 +106,20 @@ cons:
 
 * cannot easily switch back to the regular switcher (the thumbnails are sometimes convenient to have)
 * regedit `:/`
+
+
+
+# better solution: delay alt-tab
+
+This is based much more directly on the way that gnome-shell does it (see above).
+
+The idea is relatively simple: buffer the tab part of the alt-tab for a timeout interval, instead of sending a tab keycode immediately. Then:
+
+* If the alt key is released before the timeout expires, send a quick WinXP-style alt-tab key sequence. Sending this all at once seems to be fast enough to switch windows withot any UI flashing
+* if the timeout expires, or any other key is pressed, continue with alt-tab as normal
+
+The state machine kind of logic necessary to implement this turned out to be much more complicated than I expected!
+I think I've got it totally working now (but technically it doesn't do the "any key" part above, just tab).
+The code is [here](https://github.com/madewithlinux/qmk_firmware/blob/8ab082c6ebd31fb23301eebca1fd4b7963271050/keyboards/kbdfans/kbd75/keymaps/madewithlinux/keymap.c#L18), and includes a pseudocode-ish summary of the intent.
 
 
