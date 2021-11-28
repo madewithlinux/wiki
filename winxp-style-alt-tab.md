@@ -8,6 +8,7 @@
   - [another problem: the switched-away-from app receives an alt tap](#another-problem-the-switched-away-from-app-receives-an-alt-tap)
 - [alternative solution: regedit](#alternative-solution-regedit)
 - [better solution: delay alt-tab](#better-solution-delay-alt-tab)
+  - [update 2021.11.27](#update-20211127)
 
 
 # problem
@@ -122,4 +123,13 @@ The state machine kind of logic necessary to implement this turned out to be muc
 I think I've got it totally working now (but technically it doesn't do the "any key" part above, just tab).
 The code is [here](https://github.com/madewithlinux/qmk_firmware/blob/8ab082c6ebd31fb23301eebca1fd4b7963271050/keyboards/kbdfans/kbd75/keymaps/madewithlinux/keymap.c#L18), and includes a pseudocode-ish summary of the intent.
 
+
+## update 2021.11.27
+I rewrote the delayed-alt-tab logic. It now uses this finite-state-machine:
+
+![very complicated finite state machine](images/tabalt-fsm.png)
+
+and also, it now waits 10ms after tapping right alt before tapping tab and releasing left alt. This seems to be much more consistent.
+
+The updated keyboard layout/firmware (and source for that FSM diagram) is [here](https://github.com/madewithlinux/qmk_firmware/tree/3512cb673a4ebe26e63a008357d04fde95876cd2/keyboards/kbdfans/kbd75/keymaps/madewithlinux)
 
