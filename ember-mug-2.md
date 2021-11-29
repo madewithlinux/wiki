@@ -38,7 +38,20 @@ The ground pin on the connector doesn't seem to be connected to either heater, s
 
 
 ## temperature sensor
-there's 6 unidentified pins left on the heater connector, and none of them seem to be short to each other or any other connector pin (including ground).
+there's 6 pins left on the heater connector, and none of them seem to be short to each other or any other connector pin (including ground).
 
+temperature sensor says T275 on it, which looks like a TI TMP275 based on datasheet search.
+datasheet link: https://www.ti.com/lit/ds/sbos363f/sbos363f.pdf?ts=1638144493202
+(The part where it says "Industry Standard LM75 Form Factor and Pinout" is a very good sign lol)
+
+arduino library: https://github.com/jeremycole/Temperature_LM75_Derived
+* https://www.arduino.cc/reference/en/libraries/i2c-temperature-sensors-derived-from-the-lm75/
+* https://platformio.org/lib/show/2860/I2C%20Temperature%20Sensors%20derived%20from%20the%20LM75
+* This specific sensor is supported https://github.com/jeremycole/Temperature_LM75_Derived/blob/master/doc/Sensors.md
+* 
+
+
+It looks like there's also two other little components stuffed in the side of the inside of the mug.
+not sure what they are, but it seems like they're intentionally right next to the inside wall, and packed in foam, so I'd think temperature sensors of some kind? but they're really small, so idk.
 
 
