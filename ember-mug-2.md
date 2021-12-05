@@ -55,3 +55,6 @@ It looks like there's also two other little components stuffed in the side of th
 not sure what they are, but it seems like they're intentionally right next to the inside wall, and packed in foam, so I'd think temperature sensors of some kind? but they're really small, so idk.
 
 
+# alternatives that look interesting
+https://www.amazon.com/nicelucky-Cooler-Coffee-Warmer-Desktop-2IN1/dp/B07TPF7M3N
+
