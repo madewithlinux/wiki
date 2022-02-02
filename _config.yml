@@ -1,6 +1,6 @@
 theme: jekyll-theme-primer
-title: jorsh.xyz wiki
-url: "https://jorsh.xyz/"
+title: joools.xyz wiki
+url: "https://joools.xyz/"
 baseurl: "/wiki/"
 plugins:
   - jekyll-sitemap
